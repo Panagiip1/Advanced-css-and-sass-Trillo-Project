@@ -8,9 +8,17 @@
 }
 
 .header {
+	font-size: 1.4rem;
 	height: 7rem;
 	background-color: #fff;
 	border-bottom: var(--color-grey-light-2);
+	/* we define that we want side by side */
+	display: flex;
+	/* we define the search bar and chat to be center and right */
+	/*align in the main-axis(left to right) */
+	justify-content: space-between;
+	align-items: center; 
+
 }
 
 .content {

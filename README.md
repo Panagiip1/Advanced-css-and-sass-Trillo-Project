@@ -1,0 +1,1 @@
+we start our project with the command: npm run start 
