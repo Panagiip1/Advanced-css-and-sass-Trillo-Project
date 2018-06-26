@@ -29,11 +29,21 @@
 	background-color: var(--color-grey-dark-1);
 	/* prwto 0 grow, to deutero shrink, 3o einai to width */
 	flex: 0 0 18%;
+
+	/* we put to the sidebar flex to separate the nav-item 
+	from the copyrights space-between which means that the send the copyrights to the bottom and the nav-items (ksedoxeia, pthseis etc) 
+	sthn allh pleura kai kathos einai colunn style (vertical) tha paei top and down. */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .hotel-view {
 	background-color: #fff;
+
+	/* Testing */
 	background-color: orangered;
+	height: 80rem;
 
 	flex: 1;
 }

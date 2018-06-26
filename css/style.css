@@ -79,18 +79,26 @@ body {
 .sidebar {
   background-color: var(--color-grey-dark-1);
   /* prwto 0 grow, to deutero shrink, 3o einai to width */
-  flex: 0 0 18%; }
+  flex: 0 0 18%;
+  /* we put to the sidebar flex to separate the nav-item 
+	from the copyrights space-between which means that the send the copyrights to the bottom and the nav-items (ksedoxeia, pthseis etc) 
+	sthn allh pleura kai kathos einai colunn style (vertical) tha paei top and down. */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
 
 .hotel-view {
   background-color: #fff;
+  /* Testing */
   background-color: orangered;
+  height: 80rem;
   flex: 1; }
 
 /* LOGO */
 .logo {
   height: 3.25rem;
   /* we give a little space to the logo from the left side */
-  margin-left: 3rem; }
+  margin-left: 2rem; }
 
 /* SEARCH */
 .search {
@@ -134,10 +142,54 @@ body {
 
 /* USER NAVIGATION */
 .user-nav {
-  background-color: greenyellow; }
+  /*background-color: greenyellow;*/
+  /* we format the user navigation into flex which means side by side(msg, photo_user etc) */
+  display: flex;
+  align-items: center;
+  /* align the items(msg, user_photo etc) in stretch because we want all the way to cover the header(top to bottom) */
+  align-self: stretch;
+  /* fisrt the user-nav and then their direct children */ }
+  .user-nav > * {
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center; }
+  .user-nav > *:hover {
+    background-color: var(--color-grey-light-2); }
+  .user-nav__icon-box {
+    position: relative; }
   .user-nav__icon {
     height: 2.25rem;
-    width: 2.25rem; }
+    width: 2.25rem;
+    fill: var(--color-grey-dark-2); }
+  .user-nav__notification {
+    font-size: .8rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: #fff;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
   .user-nav__user-photo {
     height: 3.75rem;
-    border-radius: 50%; }
+    border-radius: 50%;
+    margin-right: 1rem; }
+
+/* SIDE Navigation */
+.side-nav__icon {
+  width: 1.75rem;
+  height: 1.75rem; }
+
+/* Legal text - copyrights */
+.legal {
+  font-size: 1.2rem;
+  color: var(--color-grey-light-4);
+  text-align: center;
+  /* bottom and top padding (each of 2.5rem) */
+  padding: 2.5rem; }
